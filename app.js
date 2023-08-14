@@ -34,26 +34,24 @@ function uniq() {
         r += 1;
       }
     }
-    const longWords = doublicet.filter ((word) => word.length > 5);
+    const longWords = doublicet.filter((word) => word.length > 5);
 
-
-    
     console.log(r);
     console.log(uniq3);
     console.log(longWords);
   });
 }
 uniq();
-// chalenge question 
+// chalenge question
 function countVowels(word) {
-  const vowels = "aeiouAEIOU"
-  return lodash.filter([...word], char => vowels.includes(char)).length;
+  const vowels = "aeiouAEIOU";
+  return lodash.filter([...word], (char) => vowels.includes(char)).length;
 }
 function countVowelsInWords(text) {
   const words = text.split(" ");
   const vowelCounts = {};
 
-  _.forEach(words, word => {
+  _.forEach(words, (word) => {
     if (word.length > 0) {
       const vowelCount = countVowels(word);
       vowelCounts[word] = vowelCount;
@@ -64,4 +62,4 @@ function countVowelsInWords(text) {
     console.log(`${word}: ${count}`);
   });
 }
-console.log(countVowelsInWords(data))
+console.log(countVowelsInWords(data));
